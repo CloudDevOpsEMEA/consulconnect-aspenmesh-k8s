@@ -1,8 +1,8 @@
 # Makefile
 
-GIT_REPO=https://github.com/CloudDevOpsEMEA/consul-istio-k8s
+GIT_REPO=https://github.com/CloudDevOpsEMEA/consulconnect-aspenmesh-k8s
 HOME_DIR=/home/ubuntu
-REPO_DIR=${HOME_DIR}/consul-istio-k8s
+REPO_DIR=${HOME_DIR}/consulconnect-aspenmesh-k8s
 
 
 .PHONY: help
