@@ -21,6 +21,20 @@ install-k8s: ## Install k8s using kubespray
 	ansible-playbook -i inventory/istio/hosts.yaml  --become --become-user=root cluster.yml
 
 
+install-kubectl: ## Install kubectl
+	sudo snap install kubectl --classic
+	sudo mkdir -p ~/.kube
+	sudo cp /etc/kubernetes/admin.conf .kube/config || true
+	sudo chown ubuntu:ubuntu -R ~/.kube
+	sudo chmod 600 -R ~/.kube
+	echo '' >>~/.bashrc
+	echo '# Kubernetes' >>~/.bashrc
+	echo 'export KUBECONFIG=/home/ubuntu/.kube/config' >>~/.bashrc
+	echo 'sour` ce <(kubectl completion bash)' >>~/.bashrc
+	echo 'alias k=kubectl' >>~/.bashrc
+	echo 'complete -F __start_kubectl k' >>~/.bashrc
+
+
 reboot-k8s: ## Reboot k8s cluster hosts
 	ssh k8s-master sudo reboot || true
 	ssh k8s-node1 sudo reboot || true
