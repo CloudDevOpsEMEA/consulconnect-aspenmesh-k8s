@@ -14,8 +14,7 @@
         {
           "id": "httpgetappmulti1",
           "name": "HTTP on port 19081",
-          "http": "https://localhost:19081",
-          "tls_skip_verify": false,
+          "http": "http://localhost:19081",
           "method": "GET",
           "interval": "10s",
           "timeout": "1s"
@@ -36,8 +35,7 @@
         {
           "id": "httpgetappmulti2",
           "name": "HTTP on port 19082",
-          "http": "https://localhost:19082",
-          "tls_skip_verify": false,
+          "http": "http://localhost:19082",
           "method": "GET",
           "interval": "10s",
           "timeout": "1s"
@@ -58,8 +56,7 @@
         {
           "id": "httpgetappmulti3",
           "name": "HTTP on port 19083",
-          "http": "https://localhost:19083",
-          "tls_skip_verify": false,
+          "http": "http://localhost:19083",
           "method": "GET",
           "interval": "10s",
           "timeout": "1s"
