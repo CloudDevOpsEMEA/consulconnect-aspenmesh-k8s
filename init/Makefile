@@ -21,3 +21,6 @@ calico: ## Install calicoctl
 
 dist-upgrade: ## Upgrade ubuntu version
 	sudo do-release-upgrade -d 
+
+grub: ## Enable cgroup_enable en swapaccount in grub
+	./grub.sh
