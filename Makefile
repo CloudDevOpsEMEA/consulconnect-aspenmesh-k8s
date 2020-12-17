@@ -26,7 +26,7 @@ install-kubectl: ## Install kubectl
 	sudo mkdir -p ~/.kube
 	sudo cp /etc/kubernetes/admin.conf ~/.kube/config || true
 	sudo chown ubuntu:ubuntu -R ~/.kube
-	sudo chmod 600 -R ~/.kube
+	sudo chmod 600 -R ~/.kube/config
 	echo '' >>~/.bashrc
 	echo '# Kubernetes' >>~/.bashrc
 	echo 'export KUBECONFIG=/home/ubuntu/.kube/config' >>~/.bashrc
