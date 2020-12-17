@@ -24,13 +24,13 @@ install-k8s: ## Install k8s using kubespray
 install-kubectl: ## Install kubectl
 	sudo snap install kubectl --classic
 	sudo mkdir -p ~/.kube
-	sudo cp /etc/kubernetes/admin.conf .kube/config || true
+	sudo cp /etc/kubernetes/admin.conf ~/.kube/config || true
 	sudo chown ubuntu:ubuntu -R ~/.kube
 	sudo chmod 600 -R ~/.kube
 	echo '' >>~/.bashrc
 	echo '# Kubernetes' >>~/.bashrc
 	echo 'export KUBECONFIG=/home/ubuntu/.kube/config' >>~/.bashrc
-	echo 'sour` ce <(kubectl completion bash)' >>~/.bashrc
+	echo 'source <(kubectl completion bash)' >>~/.bashrc
 	echo 'alias k=kubectl' >>~/.bashrc
 	echo 'complete -F __start_kubectl k' >>~/.bashrc
 
