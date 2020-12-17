@@ -1,0 +1,19 @@
+{
+  "service": {
+    "name": "consulapp2",
+    "tags": [
+      "consul",
+      "http"
+    ],
+    "port": 18082,
+    "check": {
+      "id": "httpgetapp2",
+      "name": "HTTP on port 18082",
+      "http": "https://localhost:18082",
+      "tls_skip_verify": false,
+      "method": "GET",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "service": {
+    "name": "consulapp1",
+    "tags": [
+      "consul",
+      "tcp"
+    ],
+    "port": 18081,
+    "check": {
+      "id": "tcppingapp1",
+      "name": "TCP on port 18081",
+      "tcp": "localhost:18081",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}

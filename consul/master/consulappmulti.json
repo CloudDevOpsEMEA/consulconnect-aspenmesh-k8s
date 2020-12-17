@@ -1,0 +1,70 @@
+{
+  "services": [
+    {
+      "id": "consulmultiapp1",
+      "name": "consulmultiapp",
+      "tags": [
+        "consul",
+        "http",
+        "primary"
+      ],
+      "address": "localhost",
+      "port": 19081,
+      "checks": [
+        {
+          "id": "httpgetappmulti1",
+          "name": "HTTP on port 19081",
+          "http": "https://localhost:19081",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "interval": "10s",
+          "timeout": "1s"
+        }
+      ]
+    },
+    {
+      "id": "consulmultiapp2",
+      "name": "consulmultiapp",
+      "tags": [
+        "consul",
+        "http",
+        "primary"
+      ],
+      "address": "localhost",
+      "port": 19082,
+      "checks": [
+        {
+          "id": "httpgetappmulti2",
+          "name": "HTTP on port 19082",
+          "http": "https://localhost:19082",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "interval": "10s",
+          "timeout": "1s"
+        }
+      ]
+    },
+    {
+      "id": "consulmultiapp3",
+      "name": "consulmultiapp",
+      "tags": [
+        "consul",
+        "http",
+        "primary"
+      ],
+      "address": "localhost",
+      "port": 19083,
+      "checks": [
+        {
+          "id": "httpgetappmulti3",
+          "name": "HTTP on port 19083",
+          "http": "https://localhost:19083",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "interval": "10s",
+          "timeout": "1s"
+        }
+      ]
+    }
+  ]
+}
